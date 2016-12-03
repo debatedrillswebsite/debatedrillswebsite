@@ -61,7 +61,7 @@
 </div>
 
 <div ng-repeat="video in videos">
-  <div class="debatefeature">
+  <div class="debatefeature" ng-if="video.active">
     <div class="video">
       <iframe width="600" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen ></iframe>
     </div>
@@ -69,8 +69,9 @@
       <h1>{{video.name}}</h1>
       <p>{{video.description}}</p>
       <div class="tags">
-        <div class="tag" ng-repeat="tag in video.tags">{{tag}}</div>
+        <div class="tag" ng-repeat="tag in video.tags" ng-click="chooseTag(tag)">{{tag}}</div>
       </div>
     </div>
   </div>
+  <br>
 </div>
