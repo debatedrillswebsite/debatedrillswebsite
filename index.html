@@ -248,16 +248,39 @@ header > .rightlinks > a:hover{
 }
 </style>
 <body ng-app="scotchApp">
+
 <header>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
   <script src="main.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(document).on("click",".student", function(){
+      $("body .student").removeClass("chosen");
+      $(this).addClass("chosen");
+    });
+    $(document).on("click", ".pranav", function(){
+      console.log("LOL");
+      $("body .testimonial").hide();
+      $("body .pranav").show();
+    });
+    $(document).on("click", ".brennan", function(){
+      $("body .testimonial").hide();
+      $("body .brennan").show();
+    });
+  });
+
+  </script>
   <a href="#"><img src="logo.jpg" ></a>
   <div class="rightlinks">
     <a href="#/debaterounds">Debate Rounds</a>
     <a href="#/drills">Drills</a>
     <a href="#/privatecoaching">Private Coaching</a>
-    <a>Testimonials</a>
+    <a href="#/testimonials">Testimonials</a>
     <a href="#/faq">FAQ</a>
     <a href="#/about">About</a>
   </div>

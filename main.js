@@ -38,6 +38,12 @@
                     controller  : 'mainController'
                 })
 
+                .when('/testimonials', {
+                    //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/testimonials.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/testimonials.html',
+                    controller  : 'mainController'
+                })
+
 
                 .when('/debaterounds', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
