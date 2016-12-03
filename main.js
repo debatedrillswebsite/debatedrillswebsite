@@ -3,6 +3,8 @@
     // create the module and name it scotchApp
     var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
+
+
     scotchApp.config(function($routeProvider) {
             $routeProvider
 
@@ -27,10 +29,15 @@
                 .when('/drills', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/drills.html',
                     controller  : 'mainController'
-                }) 
+                })
                 // route for the contact page
                 .when('/privatecoaching', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/privatecoaching.html',
+                    controller  : 'mainController'
+                });
+
+                .when('/debaterounds', {
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
                     controller  : 'mainController'
                 });
         });
@@ -39,6 +46,13 @@
         scotchApp.controller('mainController', function($scope) {
             // create a message to display in our view
             $scope.message = 'Everyone come and see how good I look!';
+            $scope.videos = [
+              {
+                "url" : "https://www.youtube.com/watch?v=Oef5kvRXI-0",
+                "name" : "VBT 2011 Octos Pt 1"
+              }
+            ];
+
         });
 
         scotchApp.controller('aboutController', function($scope) {
