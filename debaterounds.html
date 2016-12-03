@@ -2,6 +2,7 @@
 
 
 <div ng-repeat="video in videos">
-  <iframe width="560" height="315" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+  {{video.url}}
+  <iframe width="560" height="315" src="{!!video.url!!}" frameborder="0" allowfullscreen></iframe>
 </div>
 Hello
