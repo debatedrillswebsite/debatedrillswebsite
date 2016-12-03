@@ -27,7 +27,7 @@
                 .when('/drills', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/drills.html',
                     controller  : 'mainController'
-                });
+                })
 
                 // route for the contact page
                 .when('/privatecoaching', {
