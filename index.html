@@ -9,9 +9,11 @@ header{
   display:relative;
   padding-right:15px;
   box-sizing:border-box;
+  padding-bottom:1px;
+  border-bottom:1px #ddd solid;
 }
-header > img{
-  height:60px;
+header > a > img{
+  height:59px;
   float:left;
   margin:0px;
 }
@@ -24,6 +26,7 @@ header > .rightlinks > a{
   height:60px;
   padding-top:22px;
   box-sizing:border-box;
+  text-decoration: none;
   float:right;
   margin-right:15px;
   margin-left:15px;
@@ -147,8 +150,6 @@ header > .rightlinks > a:hover{
 
 }
 
-
-
 .videos .video h1{
   font-size:15px;
   font-family:"Lato";
@@ -156,44 +157,113 @@ header > .rightlinks > a:hover{
   width:100%;
   margin-top:6px;
 }
+
+.general{
+  width:100%;
+  padding-bottom:40px;
+}
+
+.general > div {
+  width:100%;
+  height:auto;
+  display:inline-block;
+  background-color:black;
+  background-image: url('dots.png');
+  background-size:cover;
+
+}
+
+.general h1{
+  width:80%;
+  margin-left:10%;
+  font-size:38px;
+  font-weight:300;
+  text-align:center;
+  font-family:"Lato";
+  color:white;
+}
+
+.general p{
+  width:80%;
+  margin-left:10%;
+  font-size:14px;
+  font-weight:400;
+  font-family:"Lato";
+}
+
+.general p b{
+  width:100%;
+  text-align: center;
+
+  font-size:28px;
+  font-weight:300;
+  text-align:center;
+  font-family:"Lato";
+  color:#444;
+  display: inline-block;
+}
+
+.general img{
+  width:50%;
+  margin-left:25%;
+}
+.team{
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+.profile{
+  width: 50%;
+  float:left;
+  min-height: 50vh;
+}
+
+.profile > img{
+  width:60%;
+  margin:20%;
+  border-radius: 100%;
+  margin-top:0px;
+  margin-bottom:6px;
+}
+.profile > h1{
+  width:100%;
+  font-size: 22px;
+  font-family: "Lato";
+  text-align: center;
+  margin-top:0px;
+  font-weight:400;
+}
+
+.profile > p{
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Lato";
+  margin-top:0px;
+  font-weight:300;
+
+}
 </style>
-
-<div class="video">
-  <img src="debatedrills.png" width="100%">
-  <div class="overlay">
-    <h1>win more rounds. improve faster.</h1>
-    <h2>lectures, drills, resources and analysis of past debates</h2>
+<body ng-app="scotchApp">
+<header>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="main.js"></script>
+  <a href="#"><img src="logo.jpg" ></a>
+  <div class="rightlinks">
+    <a>Debate Rounds</a>
+    <a href="#/drills">Drills</a>
+    <a>Private Coaching</a>
+    <a>Testimonials</a>
+    <a href="#/about">About</a>
   </div>
+</header>
+<div ng-controller="mainController">
+  <div id="main">
+    <div ng-view></div>
 </div>
-<div class="testimonials">
-  <h2>TESTIMONIALS</h2>
-  <h1>"I worked with Paras extensively the summer before my senior year and
-     leading up to the TOC, and based on that time I honestly believe Paras
-     is the most unique and exceptional coach in the entire business"  --Regan Grishaber</h1>
 </div>
-
-<div class="videos">
-  <h2>RECENT VIDEOS</h2>
-  <div class="video">
-    <img src="pranav.png">
-    <h1>Bridgewater AV vs Kerigan AT</h1>
-  </div>
-
-  <div class="video">
-    <img src="pranav.png">
-
-    <h1>Bridgewater AV vs Kerigan AT</h1>
-  </div>
-
-  <div class="video">
-    <img src="pranav.png">
-
-    <h1>Bridgewater AV vs Kerigan AT</h1>
-  </div>
-
-  <div class="video">
-    <img src="pranav.png">
-
-    <h1>Bridgewater AV vs Kerigan AT</h1>
-  </div>
-</div>
+</body>
