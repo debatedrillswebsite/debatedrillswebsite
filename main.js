@@ -35,6 +35,7 @@
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/privatecoaching.html',
                     controller  : 'mainController'
                 })
+                
 
                 .when('/debaterounds', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
