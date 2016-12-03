@@ -51,7 +51,7 @@
             $scope.message = 'Everyone come and see how good I look!';
             $scope.videos = [
               {
-                "url" : "https://www.youtube.com/watch?v=Oef5kvRXI-0",
+                "url" : "https://www.youtube.com/v/Oef5kvRXI-0",
                 "name" : "VBT 2011 Octos Pt 1"
               }
             ];
