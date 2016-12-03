@@ -41,6 +41,7 @@
 
                 .when('/debaterounds', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
+                    //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/debaterounds.html',
                     controller  : 'mainController'
                 });
         });
@@ -52,7 +53,9 @@
             $scope.videos = [
               {
                 "url" : "https://www.youtube.com/v/Oef5kvRXI-0",
-                "name" : "VBT 2011 Octos Pt 1"
+                "name" : "VBT 2011 Octos Pt 1",
+                "description" : "In this match, the two debaters engage using things from tricks to theory to Ks to other forms of debate, all to come down to a stellar 2AR",
+                "tags" : ["Spreading","Tricks", "Theory"]
               }
             ];
 

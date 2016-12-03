@@ -1,5 +1,76 @@
 <link href="https://fonts.googleapis.com/css?family=Arvo|Bitter|Copse|Cutive|Lora:700|Sanchez|Scope+One|Slabo+27px|Trocchi|Vesper+Libre" rel="stylesheet">
+<style>
+.debatefeature{
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+  height:50vh;
+  background-color:#eee;
+}
+
+.debatefeature > .video{
+  width:65%;
+  float:left;
+  height:50vh;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+.debatefeature > .info{
+  width:35%;
+  float:left;
+  height:50vh;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+.debatefeature > .info > h1{
+  font-size:16px;
+  font-family:"Lato";
+  text-align:left;
+  color:#444;
+}
+
+.debatefeature > .info > p{
+  font-size:12px;
+  font-family:"Lato";
+  text-align:left;
+  color:#444;
+}
+
+.debatefeature > .info > .tags{
+  width:100%;
+}
+
+.debatefeature > .info > .tags > .tag{
+  display:inline-block;
+  margin:4px;
+  padding:4px;
+  background-color:teal;
+  color:white;
+  font-size:12px;
+  font-family:"Lato";
+  border-radius:4px;
+}
+</style>
+
+<div class="general">
+  <div>
+    <h1>Debate Rounds</h1>
+  </div>
+</div>
 
 <div ng-repeat="video in videos">
-  <iframe width="80%" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+  <div class="debatefeature">
+    <div class="video">
+      <iframe width="600" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen ></iframe>
+    </div>
+    <div class="info">
+      <h1>{{video.name}}</h1>
+      <p>{{video.description}}</p>
+      <div class="tags">
+        <div class="tag" ng-repeat="tag in video.tags">{{tag}}</div>
+      </div>
+    </div>
+  </div>
 </div>
