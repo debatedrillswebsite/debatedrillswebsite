@@ -14,18 +14,18 @@
 
                 // route for the about page
                 .when('/about', {
-                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/team.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/team.html',
                     controller  : 'mainController'
                 })
 
                 .when('/faq', {
-                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/faq.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/faq.html',
                     controller  : 'mainController'
                 })
 
                 // route for the contact page
                 .when('/drills', {
-                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/drills.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/drills.html',
                     controller  : 'mainController'
                 });
         });
