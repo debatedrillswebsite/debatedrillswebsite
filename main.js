@@ -1,7 +1,9 @@
 // script.js
 
     // create the module and name it scotchApp
-    var scotchApp = angular.module('scotchApp', ['ngRoute']);
+    var scotchApp = angular.module('scotchApp', ['ngRoute']).config(function($sceProvider) {
+      $sceProvider.enabled(false);
+   });;
 
 
 
@@ -35,7 +37,7 @@
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/privatecoaching.html',
                     controller  : 'mainController'
                 })
-                
+
 
                 .when('/debaterounds', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
