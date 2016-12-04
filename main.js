@@ -35,6 +35,7 @@
                 // route for the contact page
                 .when('/privatecoaching', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/privatecoaching.html',
+                    //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/privatecoaching.html',
                     controller  : 'mainController'
                 })
 
