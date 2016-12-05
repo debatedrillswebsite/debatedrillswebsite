@@ -45,12 +45,20 @@
 .debatefeature > .info > .tags > .tag{
   display:inline-block;
   margin:4px;
+  cursor: pointer;
   padding:4px;
   background-color:teal;
   color:white;
   font-size:12px;
   font-family:"Lato";
   border-radius:4px;
+}
+
+.tagger{
+  margin-left: 15%;
+font-family: Lato;
+margin-top: -10px;
+margin-bottom: 10px;
 }
 </style>
 
@@ -59,9 +67,9 @@
     <h1>Debate Rounds</h1>
   </div>
 </div>
-
+<div ng-show="tagged" class="tagger">Videos tagged with <i>{{tagged}}</i>. <span style="color:pink;cursor:pointer;" ng-click="cleartagged()">Clear search.</span></div>
 <div ng-repeat="video in videos">
-  <div class="debatefeature" ng-if="video.active">
+  <div class="debatefeature" ng-show="video.active">
     <div class="video">
       <iframe width="600" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen ></iframe>
     </div>

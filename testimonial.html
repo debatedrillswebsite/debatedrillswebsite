@@ -254,6 +254,23 @@ header > .rightlinks > a:hover{
   font-size:14px;
 }
 
+.goback{
+  width:60px;
+  height: 60px;
+  background-color:black;
+  border-radius:100%;
+  color:white;
+  font-family: "Lato";
+  font-size:11px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top:25px;
+  left:10%;
+  top:30px;
+  position: absolute;
+  text-decoration: none;
+}
+
 </style>
 
 <div class="general">
@@ -264,17 +281,13 @@ header > .rightlinks > a:hover{
 
 
 
-  <div class="testimonials" style="background-color:transparent;border:none;">
-    <h1 style="color:black;">Click on a past student to hear more about their experience with debate drills.</h1>
-    <div class="students">
-      <div class="student" ng-repeat="testimonial in testimonials" >
-        <div class="prof" style="background-image:url('{{testimonial.picture}}')" ng-click="redirect(testimonial.slug)"></div>
-        <h1 ng-click="redirect(testimonial.slug)">{{testimonial.name}}</h1>
-      </div>
+  <div class="testimonials" style="background-color:transparent;border:none;position:relative;">
+    <a class="goback" href="#/testimonials">Go Back</a>
+    <div class="testimonial">
 
-
-
-
-
+      <h1>{{agent.name}}</h1>
+      <h2>{{agent.subtitle}}</h2>
+      <p>{{agent.class}}</p>
+      <p>{{agent.paragraph}}</p>
     </div>
   </div>
