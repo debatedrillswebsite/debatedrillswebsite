@@ -47,7 +47,7 @@
 
                 .when('/testimonial/:code', {
                     //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/testimonial.html',
-                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/testimonials.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/testimonial.html',
                     controller  : 'mainController'
                 })
 
