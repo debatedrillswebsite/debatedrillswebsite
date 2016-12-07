@@ -51,6 +51,12 @@
                     controller  : 'mainController'
                 })
 
+                .when('/video/:video', {
+                    //templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/video.html',
+                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/video.html',
+                    controller  : 'mainController'
+                })
+
                 .when('/debaterounds', {
                     templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/debaterounds.html',
                     //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/debaterounds.html',
@@ -104,6 +110,7 @@
             $scope.videos = [
               {
                 "url" : "https://www.youtube.com/v/Oef5kvRXI-0",
+                "id" : 1,
                 "name" : "VBT 2011 Octos Pt 1",
                 "description" : "In this match, the two debaters engage using things from tricks to theory to Ks to other forms of debate, all to come down to a stellar 2AR",
                 "tags" : ["Spreading","Tricks", "Theory"],
@@ -111,12 +118,21 @@
               },
               {
                 "url" : "https://www.youtube.com/v/jNYdYmw6Aug",
+                "id" : 2,
                 "name" : "VBT 2012 Semis Pt 1",
                 "description" : "This match involves a lot of diffferent debate topics lorem ipsum delorum ipselof kalirp ropas the bolasid si ",
                 "tags" : [ "Theory"],
                 "active"  : true
               }
             ];
+
+
+            for(i = 0; i < $scope.videos.length; i++){
+              if($scope.videos[i].id == $routeParams.video){
+                $scope.vid = $scope.videos[i];
+              }
+            }
+
 
           $scope.testimonials = [
             {

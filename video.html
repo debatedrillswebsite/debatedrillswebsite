@@ -1,0 +1,115 @@
+<link href="https://fonts.googleapis.com/css?family=Arvo|Bitter|Copse|Cutive|Lora:700|Sanchez|Scope+One|Slabo+27px|Trocchi|Vesper+Libre" rel="stylesheet">
+<style>
+.debatefeature{
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+  height:50vh;
+  background-color:#eee;
+}
+
+.debatefeature > .video{
+  width:65%;
+  float:left;
+  height:50vh;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+.debatefeature > .info{
+  width:35%;
+  float:left;
+  height:50vh;
+  padding:10px;
+  box-sizing: border-box;
+}
+
+.debatefeature > .info > h1{
+  font-size:16px;
+  font-family:"Lato";
+  text-align:left;
+  color:#444;
+}
+
+.debatefeature > .info > p{
+  font-size:12px;
+  font-family:"Lato";
+  text-align:left;
+  color:#444;
+}
+
+.debatefeature > .info > .tags{
+  width:100%;
+}
+
+.debatefeature > .info > .tags > .tag{
+  display:inline-block;
+  margin:4px;
+  cursor: pointer;
+  padding:4px;
+  background-color:teal;
+  color:white;
+  font-size:12px;
+  font-family:"Lato";
+  border-radius:4px;
+}
+
+.tagger{
+  margin-left: 15%;
+font-family: Lato;
+margin-top: -10px;
+margin-bottom: 10px;
+}
+
+.debateinfo{
+  width:70%;
+  margin-left:15%;
+  font-size:16px;
+  margin-bottom:15px;
+}
+
+.debateinfo > p{
+  width:100%;
+  font-size:14px;
+  font-family: "Lato";
+  color:#444;
+
+
+}
+
+.debateinfo > .tags{
+  width:100%;
+}
+
+.debateinfo > .tags > .tag{
+  display:inline-block;
+  margin:4px;
+  cursor: pointer;
+  padding:4px;
+  background-color:teal;
+  color:white;
+  font-size:12px;
+  font-family:"Lato";
+  border-radius:4px;
+}
+
+
+</style>
+
+<div class="general">
+  <div>
+    <h1>Video: {{vid.name}}</h1>
+  </div>
+</div>
+<div class="debateinfo">
+  <p>{{vid.description}}</p>
+  <div class="tags">
+    <div class="tag" ng-repeat="tag in vid.tags" ng-click="chooseTag(tag)">{{tag}}</div>
+  </div>
+</div>
+  <div class="debatefeature" >
+
+      <iframe width="900" height="676" ng-src="{{vid.url}}" frameborder="0" allowfullscreen ></iframe>
+
+  </div>
+  <br>
