@@ -352,6 +352,26 @@ header > .rightlinks > a:hover{
 
   <script>
   $(document).ready(function(){
+
+
+    testimonials = [
+      "“I still remembered his lectures about argument selection, time tradeoffs and debate as a game before the most important and final rounds of my career.” - Pranav Reddy",
+      "“What was most impressive about drilling with Paras was how he would keep track of time spent on each area of the flow and break down my argument choices and time allocation after every speech.” - Jackson Lallas",
+      "My time working with Paras Kumar was when I made the fastest and most rewarding improvement as a debater. His commitment as a coach and exceptional attention to detail will help you fix the mistakes and improve problems that never even occurred to you. - Dan Allesandro",
+      "I improved more than I ever did at camp and a year’s worth of tournaments working with Paras for a week. His well-thought out and effective simulation of round environment sets up the perfect storm for improvement for anyone serious about improving. - Connor Davis",
+      "“There are a lot of things Paras didn’t do for me - he never cut me a card, never wrote me a case, and never did my prep.  Instead, Paras taught me critical thinking skills.  He encouraged constant practice and drilled with me endlessly until I could hold my own in a debate round.  In other words, you should hire Paras if you want to learn lasting debate skills.” - Brennan Caruthers",
+      "I personally found myself making leaps within single sessions. -Ishan Timalsina",
+      "Paras understands debate at its heart, and has years of experience into teaching debaters to understand and excel at the activity in short but intensive periods of time. -Srikar Pyda",
+      "Paras showed me how to collaborate effectively at a high level, a skill I have found very useful as I transitioned to the 'real world'. -Chat Malladi, Cal Tech 2016"
+    ];
+    var index = 0;
+    function nextTab() {
+        $("html .tslideshow").fadeOut().html(testimonials[index]).fadeIn();
+        index = (index + 1) % testimonials.length;
+    }
+    nextTab();
+    window.setInterval(nextTab, 6000);
+
     $(document).on("click", ".question", function(){
       $(this).next().slideToggle();
     });
@@ -376,13 +396,19 @@ header > .rightlinks > a:hover{
       $("body .testimonial").hide();
       $("body .ef").show();
     });
+    $(document).on("click", ".dp", function(){
+      $("body .testimonial").hide();
+      $("body .dp").show();
+    });
+
+
   });
 
   </script>
   <a href="#"><img src="logo.jpg" ></a>
   <div class="rightlinks">
     <a href="#/debaterounds">Debate Rounds</a>
-    <a href="#/drills">Drills</a>
+    <a href="#/drills">Debate Drills</a>
     <a href="#/privatecoaching">Private Coaching</a>
     <a href="#/testimonials">Testimonials</a>
     <a href="#/faq">FAQ</a>

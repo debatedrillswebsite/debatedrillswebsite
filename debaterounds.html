@@ -69,12 +69,12 @@ margin-bottom: 10px;
 </div>
 <div ng-show="tagged" class="tagger">Videos tagged with <i>{{tagged}}</i>. <span style="color:pink;cursor:pointer;" ng-click="cleartagged()">Clear search.</span></div>
 <div ng-repeat="video in videos">
-  <div class="debatefeature" ng-show="video.active">
+  <div class="debatefeature" ng-show="video.active" >
     <div class="video">
       <iframe width="600" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen ></iframe>
     </div>
     <div class="info">
-      <h1>{{video.name}}</h1>
+      <h1 ng-click="videowatch(video.id)" style="cursor:pointer;">{{video.name}}</h1>
       <p>{{video.description}}</p>
       <div class="tags">
         <div class="tag" ng-repeat="tag in video.tags" ng-click="chooseTag(tag)">{{tag}}</div>

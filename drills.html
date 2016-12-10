@@ -208,7 +208,7 @@ header > .rightlinks > a:hover{
 }
 </style>
 
-<div class="general">
+<div class="general" style="display:none;">
   <div>
     <h1>Drill Sessions</h1>
     <img src="drills.png">
@@ -225,4 +225,26 @@ This method is very successful because it implements the philosophy of “do it 
 <p>
 Please check out any of the drills on this website for an in depth example of what these drills look like!
 </p>
+</div>
+
+<div class="general">
+  <div>
+    <h1>Debate Drills</h1>
+  </div>
+</div>
+<div ng-show="tagged" class="tagger">Videos tagged with <i>{{tagged}}</i>. <span style="color:pink;cursor:pointer;" ng-click="cleartagged()">Clear search.</span></div>
+<div ng-repeat="video in videos">
+  <div class="debatefeature" ng-show="video.active" >
+    <div class="video">
+      <iframe width="600" height="315" ng-src="{{video.url}}" frameborder="0" allowfullscreen ></iframe>
+    </div>
+    <div class="info">
+      <h1 ng-click="videowatch(video.id)" style="cursor:pointer;">{{video.name}}</h1>
+      <p>{{video.description}}</p>
+      <div class="tags">
+        <div class="tag" ng-repeat="tag in video.tags" ng-click="chooseTag(tag)">{{tag}}</div>
+      </div>
+    </div>
+  </div>
+  <br>
 </div>

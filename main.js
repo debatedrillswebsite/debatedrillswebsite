@@ -53,8 +53,8 @@
                 })
 
                 .when('/video/:video', {
-                    //templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/video.html',
-                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/video.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/video.html',
+                    //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/video.html',
                     controller  : 'mainController'
                 })
 
@@ -108,6 +108,15 @@
 
 
             }
+            $scope.videowatch = function(code){
+              for(i = 0; i < $scope.videos.length; i++){
+                if($scope.videos[i].id == code){
+                  $scope.vid = $scope.videos[i];
+                }
+              }
+              $location.path( "/video/" + code );
+            }
+
             $scope.videos = [
               {
                 "url" : "https://www.youtube.com/v/Oef5kvRXI-0",
