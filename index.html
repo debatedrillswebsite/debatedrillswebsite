@@ -343,13 +343,18 @@ header > .rightlinks > a:hover{
 <header>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
   <script
     src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
   <script src="main.js"></script>
+
   <script>
   $(document).ready(function(){
+    $(document).on("click", ".question", function(){
+      $(this).next().show();
+    });
     $(document).on("click",".student", function(){
       $("body .student").removeClass("chosen");
       $(this).addClass("chosen");

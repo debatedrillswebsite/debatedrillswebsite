@@ -23,7 +23,8 @@
                 })
 
                 .when('/faq', {
-                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/faq.html',
+                    //templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/faq.html',
+                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/faq.html',
                     controller  : 'mainController'
                 })
 
@@ -114,7 +115,10 @@
                 "name" : "VBT 2011 Octos Pt 1",
                 "description" : "In this match, the two debaters engage using things from tricks to theory to Ks to other forms of debate, all to come down to a stellar 2AR",
                 "tags" : ["Spreading","Tricks", "Theory"],
-                "active"  : true
+                "watched" : false,
+                "active"  : true,
+                "schoolcode1" : "HarkerPR",
+                "schoolcode2" : "HWLCC"
               },
               {
                 "url" : "https://www.youtube.com/v/jNYdYmw6Aug",
