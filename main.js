@@ -23,8 +23,8 @@
                 })
 
                 .when('/faq', {
-                    //templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/faq.html',
-                    templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/faq.html',
+                    templateUrl : 'https://debatedrillswebsite.github.io/debatedrillswebsite/faq.html',
+                    //templateUrl : 'file:///Users/mathewpregasen/Dropbox/Projects/debatedrills_main/faq.html',
                     controller  : 'mainController'
                 })
 
