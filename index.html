@@ -353,7 +353,7 @@ header > .rightlinks > a:hover{
   <script>
   $(document).ready(function(){
     $(document).on("click", ".question", function(){
-      $(this).next().show();
+      $(this).next().toggleSlide();
     });
     $(document).on("click",".student", function(){
       $("body .student").removeClass("chosen");
